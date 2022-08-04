@@ -5,7 +5,7 @@ import styles from './Comment.module.css';
 
 
 interface CommentProps {
-  
+
   content: string;
   onDeleteComment: (comment: string) => void;
 }
@@ -23,10 +23,10 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
   }
 
 
-/** implementada diretamente no elemento via arrow function */
+  /** implementada diretamente no elemento via arrow function */
   // Método alternativo de implementação do handle
-  
-  function handleLikeComment() {  
+
+  function handleLikeComment() {
     setLikeCount((state) => { // React vai salvar fila de estados  
       return state + 1
     });
@@ -37,7 +37,12 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
 
   return (
     <div className={styles.comment}>
-      <Avatar hasBorder={false} src="https://github.com/gutoo01.png" alt="" />
+      <Avatar
+        hasBorder={false}
+        src="https://github.com/gutoo01.png"
+        title="clique aqui!"
+        onClick={() => alert('Clicou na foto!')}
+      />
 
 
       <div className={styles.commentBox}>
