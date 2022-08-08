@@ -31,7 +31,7 @@ interface PostProps {
 
 export function Post({ author, publishedAt, content }: PostProps) {
 
-  const [comments, setComments] = useState(['Post muito brabo, hamm?!'])
+  const [comments, setComments] = useState<PostProps[]>([])
 
   const [newCommentText, setNewCommentText] = useState('')
 
